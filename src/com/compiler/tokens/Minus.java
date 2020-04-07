@@ -7,8 +7,8 @@ public class Minus extends Token {
 
     @Override
     public String getASMCode() {
-        return "POP AX\n" +
-                "POP BX\n" +
+        return "POP BX\n" +
+                "POP AX\n" +
                 "SUB AX, BX\n" +
                 "PUSH AX\n";
     }

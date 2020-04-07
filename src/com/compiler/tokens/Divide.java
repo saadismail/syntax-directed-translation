@@ -7,8 +7,8 @@ public class Divide extends Token {
 
     @Override
     public String getASMCode() {
-        return "POP AX\n" +
-                "POP BX\n" +
+        return "POP BX\n" +
+                "POP AX\n" +
                 "MOV DX, 0\n" +
                 "DIV BX\n" +
                 "PUSH AX\n";

@@ -27,7 +27,7 @@ public class Parser {
             else if (c == '/') result.add(new Divide());
             else if (c == '(') result.add(new OpeningParanthesis());
             else if (c == ')') result.add(new ClosingParanthesis());
-            else if (c == '%') result.add(new Percentage());
+            else if (c == '%') result.add(new Modulo());
         }
 
         return result;
@@ -36,14 +36,11 @@ public class Parser {
     private int parseInteger(List<Token> result, int index) {
         StringBuilder number = new StringBuilder();
 
-        char c = expression.charAt(index);
-        while (index < expression.length() && Character.isDigit(c)) {
-            number.append(c);
+        while (index < expression.length() && Character.isDigit(expression.charAt(index))) {
+            number.append(expression.charAt(index));
             index++;
-            c = expression.charAt(index);
         }
-        index--;
         result.add(new Number(number.toString()));
-        return index;
+        return --index;
     }
 }

@@ -1,14 +1,14 @@
 package com.compiler.tokens;
 
-public class Percentage extends Token {
-    public Percentage() {
+public class Modulo extends Token {
+    public Modulo() {
         super("%");
     }
 
     @Override
     public String getASMCode() {
-        return "POP AX\n" +
-                "POP BX\n" +
+        return "POP BX\n" +
+                "POP AX\n" +
                 "MOV DX, 0\n" +
                 "DIV BX\n" +
                 "PUSH DX\n";

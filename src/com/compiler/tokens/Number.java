@@ -4,6 +4,7 @@ public class Number extends Token {
 
     public Number(String value) {
         super(value);
+        this.userFriendlyType = "Number";
         Integer.parseInt(value);
     }
 

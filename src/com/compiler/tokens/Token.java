@@ -4,6 +4,7 @@ import java.util.Objects;
 
 abstract public class Token {
     protected String value;
+    public String userFriendlyType = "Operator";
 
     public Token(String value) {
         this.value = value;
